@@ -1,0 +1,6 @@
+<!--pages/found/index.wxml-->
+<view class="found">
+    <tab-container>
+        <text>发现</text>
+    </tab-container>
+</view>

@@ -1,0 +1,46 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/category/index",
+        "pages/personal/index",
+        "pages/found/index"
+    ],
+    "subpackages": [
+        {
+            "root": "packageA",
+            "name": "packageA",
+            "pages": ["pages/search/index"]
+        }
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTextStyle": "black"
+    },
+    "entryPagePath": "pages/index/index",
+    "sitemapLocation": "sitemap.json",
+    "lazyCodeLoading": "requiredComponents",
+    "tabBar": {
+        "custom": true,
+        "color": "#474A54",
+        "selectedColor": "#474A54",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "首页"
+            },
+            {
+                "pagePath": "pages/category/index",
+                "text": "分类"
+            },
+            {
+                "pagePath": "pages/found/index",
+                "text": "发现"
+            },
+            {
+                "pagePath": "pages/personal/index",
+                "text": "我的"
+            }
+        ]
+    }
+}

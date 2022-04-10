@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "tab-container": "../components/tabContainer/index"
+  },
+  "navigationStyle": "custom"
+}

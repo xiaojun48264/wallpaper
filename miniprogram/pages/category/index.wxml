@@ -1,0 +1,6 @@
+<!--pages/category/index.wxml-->
+<view class="category">
+    <tab-container>
+        <text>分类</text>
+    </tab-container>
+</view>

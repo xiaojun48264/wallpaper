@@ -1,0 +1,52 @@
+/* pages/components/tabContainer/index.cscc */
+@use '../../../styles/var';
+
+@mixin decoration($position, $margin, $height, $radius, $hierarchy) {
+    width: calc(100% - #{$margin});
+    height: $height;
+    border-top-left-radius: $radius;
+    border-top-right-radius: $radius;
+    background-color: rgba($color: #FFF, $alpha: 1 - (($hierarchy - 1) * 0.2));
+    @include decoration-position($position, $margin, $height, $hierarchy)
+}
+
+@mixin decoration-position($position, $margin, $height, $hierarchy) {
+    @if $position == "relative" {
+        position: relative;
+    } @else {
+        position: absolute;
+        top: -#{$height * ($hierarchy - 1)};
+        left: $margin / 2;
+    }
+}
+
+.tab-container {
+    height: 100%;
+    background-color: var.$tab-background-color;
+    display: flex;
+    flex-direction: column;
+    .tab-container-header {
+        padding-bottom: 30px;
+        flex-shrink: 0;
+        box-sizing: content-box;
+    }
+    .tab-container-body {
+        flex: 1;
+        @include decoration(relative, 0, 100%, 15px, 1);
+        padding-top: var.$container-padding-default;
+        display: flex;
+        flex-direction: column;
+        &::after {
+            content: "";
+            @include decoration(position, 30px, 6px, 6px, 2);
+        }
+        &::before {
+            content: "";
+            @include decoration(position, 40px, 6px, 6px, 3);
+        }
+        .tab-container-content {
+            width: 750rpx;
+            height: 100%;
+        }
+    }
+}

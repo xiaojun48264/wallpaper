@@ -1,0 +1,12 @@
+/* pages/index/index.wxss */
+@use 'styles/var';
+.home {
+    height: 100%;
+    .search-field {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .home-swiper {
+        padding: 0 var.$container-padding-default;
+    }
+}

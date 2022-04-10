@@ -1,0 +1,9 @@
+<!--pages/custom-tab-bar/index.wxml-->
+<view class="custom-tab-bar">
+    <view class="tab-bar-container">
+        <view class="tab-bar-item" wx:for="{{ tabBarList }}" wx:for-item="tab" wx:key="pagePath" data-path="{{ tab.pagePath }}" data-index="{{ index }}" bindtap="switchTab">
+            <image class="tab-bar-item-image" src="{{ selectTab === index ? tab.selectedIconPath : tab.iconPath }}" ></image>
+            <view class="tab-bar-item-text" style="color: {{ selectTab === index ? selectColor : color }};">{{ tab.text }}</view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,21 @@
+<!--pages/index/index.wxml-->
+<view class="home">
+    <tab-container>
+        <view class="home-search" slot="header">
+            <van-search custom-class="search-field" bind:click-input="onClickSearch" value="{{ searchValue }}" shape="round" background="transparent" placeholder="请输入搜索的关键字" disabled="{{ true }}" />
+        </view>
+        <view class="home-swiper">
+            <swiper	indicator-dots indicator-active-color="#fbb932" autoplay circular interval="{{ 3000 }}" easing-function="linear">
+                <swiper-item>
+                    <image src="/image/tabBar/icon_category.png"></image>
+                </swiper-item>
+                <swiper-item>
+                    <image src="/image/tabBar/icon_home.png"></image>
+                </swiper-item>
+                <swiper-item>
+                    <image src="/image/tabBar/icon_found.png"></image>
+                </swiper-item>
+            </swiper>
+        </view>
+    </tab-container>
+</view>

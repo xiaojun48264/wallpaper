@@ -1,0 +1,6 @@
+<!--pages/personal/index.wxml-->
+<view class="personal">
+    <tab-container>
+        <text>我的</text>
+    </tab-container>
+</view>

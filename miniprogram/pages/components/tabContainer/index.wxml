@@ -1,0 +1,11 @@
+<!--pages/components/tabContainer/index.wxml-->
+<view class="tab-container">
+    <view style="padding-top: {{ top }}px;padding-right: calc(100% - {{ width }}px);min-height: {{ minHeight }}px;" class="tab-container-header">
+        <slot name="header"></slot>
+    </view>
+    <view class="tab-container-body">
+        <scroll-view style="height: {{ containerHeight }};" class="tab-container-content" scroll-y="{{ true }}">
+            <slot></slot>
+        </scroll-view>
+    </view>
+</view>

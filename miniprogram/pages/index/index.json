@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "tab-container": "../components/tabContainer/index",
+    "van-search": "@vant/weapp/search/index"
+  },
+  "navigationStyle": "custom"
+}
