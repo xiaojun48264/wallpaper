@@ -1,7 +1,9 @@
 {
-  "usingComponents": {
-    "tab-container": "../components/tabContainer/index",
-    "van-search": "@vant/weapp/search/index"
-  },
-  "navigationStyle": "custom"
+    "usingComponents": {
+        "tab-container": "../components/tabContainer/index",
+        "x-search": "/components/XSearch/index",
+        "mp-cell": "weui-miniprogram/cell/cell"
+    },
+    "navigationStyle": "custom",
+    "enablePullDownRefresh": true
 }

@@ -1,0 +1,31 @@
+/* components/XSearch/index.wxss */
+.x-search {
+    .x-search-wrapper {
+        padding: 0 12px;
+        background: #f7f8fa;
+        border-radius: 999px;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+    }
+    .x-input__prefix, .x-input__suffix {
+        margin-right: 4px;
+        display: flex;
+        align-items: center;
+    }
+    .x-search__input {
+        flex: 1;
+        font-size: 14px;
+    }
+    .x-search__input-el {
+        height: 34px;
+        background: #f7f8fa;
+        width: 100%;
+        color: #323233;
+    }
+    .x-search__input--disabled {
+        .x-search__input-el {
+            color: #c8c9cc;
+        }
+    }
+}   

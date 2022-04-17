@@ -1,0 +1,14 @@
+<!--components/XSearch/index.wxml-->
+<view class="x-search">
+    <view class="x-search-wrapper">
+        <view wx:if="prefixIcon" class="x-input__prefix">
+            <icon size="24" type="{{ prefixIcon }}"></icon>
+        </view>
+        <view class="x-search__input {{ disabled ? 'x-search__input--disabled' : '' }}">
+            <input type="text" class="x-search__input-el" value="{{ value }}" placeholder="{{ placeholder }}" confirm-type="search" disabled="{{ disabled }}" bindinput="onInput" bindtap="onClickInput" />
+        </view>
+        <view wx:if="suffixIcon" class="x-input__suffix">
+            <icon size="24" type="{{ suffixIcon }}"></icon>
+        </view>
+    </view>
+</view>

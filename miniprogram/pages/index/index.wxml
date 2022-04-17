@@ -2,20 +2,86 @@
 <view class="home">
     <tab-container>
         <view class="home-search" slot="header">
-            <van-search custom-class="search-field" bind:click-input="onClickSearch" value="{{ searchValue }}" shape="round" background="transparent" placeholder="请输入搜索的关键字" disabled="{{ true }}" />
+            <x-search placeholder="请输入搜索内容" disabled="{{ true }}" bind:click-input="onClickSearch" />
         </view>
         <view class="home-swiper">
-            <swiper	indicator-dots indicator-active-color="#fbb932" autoplay circular interval="{{ 3000 }}" easing-function="linear">
+            <swiper class="swiper-container" indicator-dots indicator-active-color="#fbb932" autoplay circular interval="{{ 3000 }}" easing-function="linear">
                 <swiper-item>
-                    <image src="/image/tabBar/icon_category.png"></image>
+                    <image src="https://desk-fd.zol-img.com.cn/t_s960x600c5/g7/M00/07/02/ChMkK2JXgO6IHM7iAAHn58epIo4AACcjAI9CB0AAef_471.jpg"></image>
                 </swiper-item>
                 <swiper-item>
-                    <image src="/image/tabBar/icon_home.png"></image>
+                    <image src="https://desk-fd.zol-img.com.cn/t_s960x600c5/g7/M00/07/02/ChMkK2JXgN-IKhNuAAHvby9UMvMAACcjACqxKsAAe-H811.jpg"></image>
                 </swiper-item>
                 <swiper-item>
-                    <image src="/image/tabBar/icon_found.png"></image>
+                    <image src="https://desk-fd.zol-img.com.cn/t_s960x600c5/g7/M00/07/02/ChMkLGJXgOeIH4Y9AAHXcR_gn74AACcjAFy9AcAAdeJ403.jpg"></image>
                 </swiper-item>
             </swiper>
+        </view>
+        <view class="home-modules">
+            <view class="weui-grids">
+                <block wx:for="{{ modules }}" wx:for-item="module" wx:key="index">
+                    <view class="weui-grid" hover-class="view-hover-class">
+                        <view class="weui-grid__icon">
+                            <image class="home-modules-icon" src="{{ module.icon }}"></image>
+                        </view>
+                        <view class="weui-grid__label">{{ module.label }}</view>
+                    </view>
+                </block>
+            </view>
+        </view>
+        <view class="home-hot">
+            <mp-cell title="热门壁纸" footer="更多" link="{{ true }}"></mp-cell>
+            <scroll-view scroll-x="{{ true }}">
+                <view class="home-hot-image">
+                    <view class="hot-image-item">
+                        <image lazy-load="{{ true }}" src="https://img2.woyaogexing.com/2022/04/15/93c3810e2e19467e948d1750ad4b7d33.jpeg"></image>
+                    </view>
+                    <view class="hot-image-item">
+                        <image lazy-load="{{ true }}" src="https://img2.woyaogexing.com/2022/04/16/f19d60ced0474f1498fdb0b780ac735c.jpeg"></image>
+                    </view>
+                    <view class="hot-image-item">
+                        <image lazy-load="{{ true }}" src="https://img2.woyaogexing.com/2022/04/13/76c19af128d5496c8603550cb4f7db94.jpeg"></image>
+                    </view>
+                    <view class="hot-image-item">
+                        <image lazy-load="{{ true }}" src="https://img2.woyaogexing.com/2022/04/13/f19bf6a20dca4957aa8b2d9fd8f29b5c.jpeg"></image>
+                    </view>
+                    <view class="hot-image-item">
+                        <image lazy-load="{{ true }}" src="https://img2.woyaogexing.com/2022/04/12/4bbca308a868472d873ead84f835cc9b.jpeg"></image>
+                    </view>
+                    <view class="hot-image-item">
+                        <image lazy-load="{{ true }}" src="https://img2.woyaogexing.com/2022/04/12/f45e855a4d8c493e9b8638303275ce4e.jpeg"></image>
+                    </view>
+                    <view class="hot-image-item">
+                        <image lazy-load="{{ true }}" src="https://img2.woyaogexing.com/2022/04/07/e95ba06e72ef4b74b550efbb2bd2922f.jpeg"></image>
+                    </view>
+                </view>
+            </scroll-view>
+        </view>
+        <view class="home-recommended">
+            <mp-cell title="官方推荐" footer="更多" link="{{ true }}"></mp-cell>
+            <view class="home-recommended-image">
+                <view class="recommended-image-item">
+                    <image lazy-load="{{ true }}" src="https://img2.woyaogexing.com/2022/04/15/93c3810e2e19467e948d1750ad4b7d33.jpeg"></image>
+                </view>
+                <view class="recommended-image-item">
+                    <image lazy-load="{{ true }}" src="https://img2.woyaogexing.com/2022/04/16/f19d60ced0474f1498fdb0b780ac735c.jpeg"></image>
+                </view>
+                <view class="recommended-image-item">
+                    <image lazy-load="{{ true }}" src="https://img2.woyaogexing.com/2022/04/13/76c19af128d5496c8603550cb4f7db94.jpeg"></image>
+                </view>
+                <view class="recommended-image-item">
+                    <image lazy-load="{{ true }}" src="https://img2.woyaogexing.com/2022/04/13/f19bf6a20dca4957aa8b2d9fd8f29b5c.jpeg"></image>
+                </view>
+                <view class="recommended-image-item">
+                    <image lazy-load="{{ true }}" src="https://img2.woyaogexing.com/2022/04/12/4bbca308a868472d873ead84f835cc9b.jpeg"></image>
+                </view>
+                <view class="recommended-image-item">
+                    <image lazy-load="{{ true }}" src="https://img2.woyaogexing.com/2022/04/12/f45e855a4d8c493e9b8638303275ce4e.jpeg"></image>
+                </view>
+                <view class="recommended-image-item">
+                    <image lazy-load="{{ true }}" src="https://img2.woyaogexing.com/2022/04/07/e95ba06e72ef4b74b550efbb2bd2922f.jpeg"></image>
+                </view>
+            </view>
         </view>
     </tab-container>
 </view>

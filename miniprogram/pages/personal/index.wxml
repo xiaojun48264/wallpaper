@@ -1,6 +1,15 @@
 <!--pages/personal/index.wxml-->
 <view class="personal">
     <tab-container>
-        <text>我的</text>
+        <view slot="header" class="personal-info" bindtap="userLogin">
+            <view class="info-avatar">
+                <image src="{{ avatarUrl }}"></image>
+            </view>
+            <view class="info-content">
+                <text class="info-nickname">{{ nickName }}</text>
+                <text class="info-signature">{{ signature }}</text>
+            </view>
+        </view>
+        <view wx:if="{{ authorizeState }}" class="logout-button" bindtap="userLogout">退出登录</view>
     </tab-container>
 </view>

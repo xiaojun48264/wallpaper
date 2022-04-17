@@ -1,29 +1,34 @@
 // pages/index/index.ts
+interface moduleItemType {
+    label: string,
+    path: string,
+    icon: string
+}
+
 interface HomeDataType {
-    searchValue: String
+    modules: moduleItemType[]
 }
 Page({
     /**
      * 页面的初始数据
      */
     data: <HomeDataType>{
-        searchValue: ''
+        modules: [
+            { label: '4K壁纸', path: '', icon: '/image/home/icon_1.svg' },
+            { label: '精美头像', path: '', icon: '/image/home/icon_2.svg' },
+            { label: '美女壁纸', path: '', icon: '/image/home/icon_3.svg' },
+            { label: '动漫卡通', path: '', icon: '/image/home/icon_4.svg' },
+            { label: '情侣壁纸', path: '', icon: '/image/home/icon_5.svg' },
+            { label: '创意潮图', path: '', icon: '/image/home/icon_6.svg' },
+            { label: '签名套图', path: '', icon: '/image/home/icon_7.svg' },
+            { label: '刘海制作', path: '', icon: '/image/home/icon_8.svg' }
+        ]
     },
 
     /**
      * 方法
      */
     methods: {},
-
-    /**
-     * 生命周期函数--监听页面加载
-     */
-    onLoad() {},
-
-    /**
-     * 生命周期函数--监听页面初次渲染完成
-     */
-    onReady() {},
 
     /**
      * 生命周期函数--监听页面显示
@@ -35,31 +40,6 @@ Page({
             })
         }
     },
-
-    /**
-     * 生命周期函数--监听页面隐藏
-     */
-    onHide() {},
-
-    /**
-     * 生命周期函数--监听页面卸载
-     */
-    onUnload() {},
-
-    /**
-     * 页面相关事件处理函数--监听用户下拉动作
-     */
-    onPullDownRefresh() {},
-
-    /**
-     * 页面上拉触底事件的处理函数
-     */
-    onReachBottom() {},
-
-    /**
-     * 用户点击右上角分享
-     */
-    onShareAppMessage() {},
 
     onClickSearch() {
         wx.navigateTo({

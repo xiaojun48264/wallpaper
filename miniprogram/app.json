@@ -17,9 +17,13 @@
         "navigationBarBackgroundColor": "#fff",
         "navigationBarTextStyle": "black"
     },
-    "entryPagePath": "pages/index/index",
+    "entryPagePath": "pages/personal/index",
     "sitemapLocation": "sitemap.json",
     "lazyCodeLoading": "requiredComponents",
+    "style": "v2",
+    "useExtendedLib": {
+        "weui": true
+    },
     "tabBar": {
         "custom": true,
         "color": "#474A54",
